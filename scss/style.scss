@@ -1,0 +1,156 @@
+@import "./mixin";
+
+body{
+    @include size(100vw, 100vh);
+    @include display(flex, null, center, column, null);
+
+    background-color: #2b2b2b;
+}
+
+header{
+    @include display(flex, space-between, center, null, null);
+    @include size(95%, null);
+    @include alignment(null, 25px 50px);
+    
+    box-shadow: 0px 3px 3px 0px rgb(14, 14, 14);
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 0;
+
+    .headerTitle{
+        & h1{
+            @include font(null, 30px, 500, #9a9c9e, null);
+        }
+    }
+
+    .headerSearch{
+        & input{
+            @include size(500px, null);
+            @include font(null, 18px, 500, #9a9c9e, null);
+            @include alignment(null, 20px);
+            @include border(0 none, 5px, null, null, null, null);
+
+            background-color: #262626;
+            box-shadow: 0 0 0 0;
+            outline: 0;
+        }
+    }
+}
+
+main{
+    @include size(95%, null);
+    @include font(null, null, null, white, null);
+    @include alignment(140px 0 0 0, null);
+
+    .addTask{
+        @include border(null, 10px, null, null, null, null);
+        @include alignment(null, 30px);
+        background-color: #1a1a1a;
+        margin-bottom: 20px;
+
+        .addTaskTitle{
+            @include font(null, 17px, 600, white, null);
+            @include alignment(null, 0 0 20px 0);
+        }
+
+        .addTaskType{
+            @include alignment(0 0 25px 0, null);
+            
+            input{
+                @include border(0 none, 5px, null, null, null, null);
+                @include size(67%, null);
+                @include alignment(0 1% 0 0, 15px);
+                @include font(null, 17px, 400, white, null);
+                background-color: #262626;
+                color: white;
+                box-shadow: 0 0 0 0;
+                outline: 0;
+            }
+
+            select{
+                @include border(0 none, 5px, null, null, null, null);
+                @include size(30%, null);
+                @include alignment(null, 14px);
+                @include font(null, 17px, 400, white, null);
+                background-color: #262626;
+                color: white;
+                box-shadow: 0 0 0 0;
+                outline: 0;
+            }
+        }
+
+        .addTaskBtn{
+            
+            button{
+                @include size(100%, null);
+                @include alignment(null, 14px);
+                @include border(0 none, 5px, null, null, null, null);
+                @include font(null, 17px, 400, white, null);
+                background-color: rgb(58 58 58);
+                
+                &:hover{
+                    background-color: rgb(252, 0, 0);
+                }
+            }
+        }
+    }
+
+    .tasks{
+        @include border(null, 10px, null, null, null, null);
+        @include alignment(null, 30px);
+        background-color: #1a1a1a;
+        min-height: 520px;
+
+        .tasksTitle{
+            @include font(null, 17px, 600, white, null);
+            @include alignment(0 0 20px 0, null);
+        }
+
+        .tasksList{
+
+            .tasksItem{
+                @include display(flex, space-between, center, row, null);
+                @include border(none, 5px, null, null, null, null);
+                @include alignment(0 0 20px 0, 18px);
+                background-color: #262626;
+
+                .tasksName{
+                    @include display(flex, space-between, center, row, null);
+
+                    .urgentIcon{
+                        @include alignment(0 6px 0 0, null);
+                        color: #e40404;
+                    }
+
+                    .importantIcon{
+                        @include alignment(0 6px 0 0, null);
+                        color: #f3a703;
+                    }
+
+                    .normalIcon{
+                        @include alignment(0 6px 0 0, null);
+                        color: #028302;
+                    }
+
+                    .tasksParagraph{
+                        @include font(null, 17px, 400, white, null);
+                    }
+                }
+
+                .tasksTrash{
+                    & button{
+                        @include border(none, null, null, null, null, null);
+                        @include size(35px, 30px);
+                        background-color: #6b6b6b;
+                        color: black;
+    
+                        &:hover{
+                            background-color: #e40404;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

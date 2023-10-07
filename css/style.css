@@ -1,0 +1,155 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #2b2b2b;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 25px 50px;
+  box-shadow: 0px 3px 3px 0px rgb(14, 14, 14);
+  background-color: #1a1a1a;
+  position: fixed;
+  top: 0;
+}
+header .headerTitle h1 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #9a9c9e;
+}
+header .headerSearch input {
+  width: 500px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9a9c9e;
+  padding: 20px;
+  border: 0 none;
+  border-radius: 5px;
+  background-color: #262626;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+main {
+  width: 95%;
+  color: white;
+  margin: 140px 0 0 0;
+}
+main .addTask {
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #1a1a1a;
+  margin-bottom: 20px;
+}
+main .addTask .addTaskTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  padding: 0 0 20px 0;
+}
+main .addTask .addTaskType {
+  margin: 0 0 25px 0;
+}
+main .addTask .addTaskType input {
+  border: 0 none;
+  border-radius: 5px;
+  width: 67%;
+  margin: 0 1% 0 0;
+  padding: 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+  background-color: #262626;
+  color: white;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+main .addTask .addTaskType select {
+  border: 0 none;
+  border-radius: 5px;
+  width: 30%;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+  background-color: #262626;
+  color: white;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+main .addTask .addTaskBtn button {
+  width: 100%;
+  padding: 14px;
+  border: 0 none;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+  background-color: rgb(58, 58, 58);
+}
+main .addTask .addTaskBtn button:hover {
+  background-color: rgb(252, 0, 0);
+}
+main .tasks {
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #1a1a1a;
+  min-height: 520px;
+}
+main .tasks .tasksTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 20px 0;
+}
+main .tasks .tasksList .tasksItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border: none;
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+  padding: 18px;
+  background-color: #262626;
+}
+main .tasks .tasksList .tasksItem .tasksName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+main .tasks .tasksList .tasksItem .tasksName .urgentIcon {
+  margin: 0 6px 0 0;
+  color: #e40404;
+}
+main .tasks .tasksList .tasksItem .tasksName .importantIcon {
+  margin: 0 6px 0 0;
+  color: #f3a703;
+}
+main .tasks .tasksList .tasksItem .tasksName .normalIcon {
+  margin: 0 6px 0 0;
+  color: #028302;
+}
+main .tasks .tasksList .tasksItem .tasksName .tasksParagraph {
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+}
+main .tasks .tasksList .tasksItem .tasksTrash button {
+  border: none;
+  width: 35px;
+  height: 30px;
+  background-color: #6b6b6b;
+  color: black;
+}
+main .tasks .tasksList .tasksItem .tasksTrash button:hover {
+  background-color: #e40404;
+  color: white;
+}

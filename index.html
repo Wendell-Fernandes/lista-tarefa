@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/23e81c7751.js" crossorigin="anonymous" defer></script>
+    <script src="./js/script.js" defer></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Lista de tarefas</title>
 </head>
 <body>
+    <header>
+        <div class="headerTitle">
+            <h1>MY TASKS</h1>
+        </div>
+        <div class="headerSearch">
+            <input type="search" placeholder="Pesquisar tarefa">
+        </div>
+    </header>
+
+    <main>
+        <div class="addTask">
+            <div class="addTaskTitle">
+                <h2>Inserir tarefas</h2>
+            </div>
+            <div class="addTaskType">
+                <input type="text" placeholder="Tarefa" id="addTaskName">
+                <select name="importancia" id="addTaskImportance">
+                    <option selected disabled value="">Importância</option>
+                    <option value="urgent">Urgente</option>
+                    <option value="important">Importante</option>
+                    <option value="normal">Normal</option>
+                </select>
+            </div>
+            <div class="addTaskBtn">
+                <button id="addTaskBtn">Adicionar tarefa</button>
+            </div>
+        </div>
     
+        <div class="tasks">
+            <div class="tasksTitle">
+                <h2>Tarefas</h2>
+            </div>
+            <div id="tasksList" class="tasksList">
+
+            </div>
+        </div>
+    </main>
 </body>
 </html>
